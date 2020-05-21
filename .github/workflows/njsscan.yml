@@ -10,5 +10,5 @@ jobs:
       id: njsscan
       uses: ajinabraham/njsscan-action@v4
       with:
-        inputs: '--missing-controls'
+        args: '--missing-controls'
         targets: '.'
