@@ -1,4 +1,4 @@
-name: njsscan
+name: njsscan check
 on: [pull_request]
 jobs:
   njsscan:
