@@ -10,4 +10,4 @@ jobs:
       id: njsscan
       uses: ajinabraham/njsscan-action@v5
       with:
-        args: '.'
+        args: '-v'
