@@ -7,11 +7,16 @@ on:
 jobs:
   njsscan:
     runs-on: ubuntu-latest
-    name: njsscan check
+    name: njsscan code scanning
     steps:
-    - uses: actions/checkout@v1
-    - name: njsscan
-      id: njsscan
-      uses: ajinabraham/njsscan-action@v5
+    - name: Checkout the code
+      uses: actions/checkout@v2
+    #- name: nodejsscan scan
+    #  id: njsscan
+    #  uses: ajinabraham/njsscan-action@master
+    #  with:
+    #    args: '. --sarif --output nodejsscan_results.sarif || true'
+    - name: Upload njsscan report
+      uses: github/codeql-action/upload-sarif@v1
       with:
-        args: '.'
+        sarif_file: njsscan.sarif
